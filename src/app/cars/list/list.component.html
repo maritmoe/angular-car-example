@@ -1,0 +1,23 @@
+<h2>Cars List Page</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Description</th>
+      <th>Link</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of cars">
+      <td>{{ car.id }}</td>
+      <td>{{ car.make }}</td>
+      <td>{{ car.model }}</td>
+      <td>{{ car.description }}</td>
+      <td><a routerLink="/cars/{{ car.id }}">View</a></td>
+      <td><a routerLink="/cars/{{ car.id }}/edit">Edit</a></td>
+    </tr>
+  </tbody>
+</table>

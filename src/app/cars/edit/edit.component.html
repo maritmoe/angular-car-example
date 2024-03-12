@@ -1,0 +1,18 @@
+<div>
+  <h2>Edit Car</h2>
+  <form [formGroup]="carForm" (ngSubmit)="editCar()">
+    <div>
+      <label for="make">Make</label>
+      <input type="text" id="make" formControlName="make" />
+    </div>
+    <div>
+      <label for="model">Model</label>
+      <input type="text" id="model" formControlName="model" />
+    </div>
+    <div>
+      <label for="description">Description</label>
+      <input type="text" id="description" formControlName="description" />
+    </div>
+    <button type="submit" [disabled]="carForm.invalid">Edit Car</button>
+  </form>
+</div>
